@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltMining — Зарядные станции</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">VOLT<span>MINING</span></div>
+        <button id="connectBtn" class="glow-button">Подключить кошелек</button>
+    </header>
+
+    <main>
+        <section class="station-card">
+            <div class="status-badge">СТАТУС: В СЕТИ</div>
+            <div class="location-info">
+                <h2 id="locationName">Парковка во дворе</h2>
+                <p>Уровень 1</p>
+            </div>
+
+            <div class="power-meter">
+                <div class="power-value"><span id="powerVal">30</span> кВт/ч</div>
+                <div class="power-bar-bg">
+                    <div class="power-bar-fill" style="width: 10%;"></div>
+                </div>
+            </div>
+
+            <div class="balance-container">
+                <p>Накопленная энергия (BNB)</p>
+                <div class="balance-amount" id="balance">0.000000</div>
+            </div>
+
+            <div class="actions">
+                <button class="action-btn main-btn">Собрать прибыль</button>
+                <button class="action-btn secondary-btn">Тех. обслуживание</button>
+            </div>
+        </section>
+
+        <section class="referral-box">
+            <h3>Реферальная программа (5 уровней)</h3>
+            <p>Приглашено: <span id="refCount">0</span> / 5</p>
+            <div class="ref-link-container">
+                <input type="text" value="https://voltmining.io/?ref=your_address" readonly id="refLink">
+                <button onclick="copyRef()">Копировать</button>
+            </div>
+            <p class="hint">*Пригласите еще 3 человека для разблокировки вывода</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
